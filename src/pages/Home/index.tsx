@@ -4,14 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
 
 import {
-  CountdownContainer,
-  FormContainer,
   HomeContainer,
-  MinutesAmountInput,
-  Separator,
   StartCountdownButton,
   StopCountdownButton,
-  TaskInput,
 } from './styles'
 import { useEffect, useState } from 'react'
 import { differenceInSeconds } from 'date-fns'
@@ -132,45 +127,6 @@ export function Home() {
   return (
     <HomeContainer>
       <form action="" onSubmit={handleSubmit(handleCreateNeCycle)}>
-        <FormContainer>
-          <label htmlFor="task">I will work in</label>
-          <TaskInput
-            id="task"
-            list="task-suggestions"
-            disabled={!!activeCycle}
-            placeholder="Name for your project"
-            {...register('task')}
-          />
-
-          <datalist id="task-suggestions">
-            <option value="Project 1" />
-            <option value="Project 2" />
-            <option value="Project 3" />
-          </datalist>
-
-          <label htmlFor="minutesAmount">duration</label>
-          <MinutesAmountInput
-            type="number"
-            id="minutesAmount"
-            placeholder="00"
-            step={1}
-            min={1}
-            max={60}
-            disabled={!!activeCycle}
-            {...register('minutesAmount', { valueAsNumber: true })}
-          />
-
-          <span>minutes.</span>
-        </FormContainer>
-
-        <CountdownContainer>
-          <span>{minutes[0]}</span>
-          <span>{minutes[1]}</span>
-          <Separator>:</Separator>
-          <span>{seconds[0]}</span>
-          <span>{seconds[1]}</span>
-        </CountdownContainer>
-
         {activeCycle ? (
           <StopCountdownButton onClick={handleInterruptCycle} type="button">
             <HandPalm size={24} />
