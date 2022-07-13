@@ -10,6 +10,7 @@ export function Countdown() {
     markCurrentCycleAsFinished,
     amountSecondsPassed,
     setSecondsPassed,
+    interruptCurrentCycle,
   } = useContext(CyclesContext)
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
@@ -29,7 +30,6 @@ export function Countdown() {
 
           setSecondsPassed(totalSeconds)
           clearInterval(interval)
-          // handleInterruptCycle()
         } else {
           setSecondsPassed(secondsDifference)
         }
@@ -45,6 +45,7 @@ export function Countdown() {
     activeCycleId,
     markCurrentCycleAsFinished,
     setSecondsPassed,
+    interruptCurrentCycle,
   ])
 
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
