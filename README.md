@@ -3,7 +3,7 @@
 </div>
 
 <h3 align="center">
-Ignite feed is a project with basic functionality of a social media feed
+	Project with the main objective of controlling the time of task durations
 </h3>
 
 <h4 align="center"> 
@@ -27,17 +27,26 @@ The following tools were used in the construction of the project:
 -   **Vite**
 -   **React**
 -   **TypeScript**
--   **Css Modules**
--   **Phosphor-React**
+-   **Styled Components**
+-   **React Router Dom**
+-   **React Hook Form**
+-   **Zood**
 
 ## Layout
+
 
 * **Home**
 <br/>
 
-![Home](https://i.ibb.co/F3mzLQt/home-ignite-timer.png)
+![Home](https://i.ibb.co/6tzq0QJ/screencapture-localhost-3000-2022-07-29-17-23-01.png)
 
 <br/>
+
+* **History**
+<br/>
+
+![History](https://i.ibb.co/RQPXCg2/screencapture-localhost-3000-history-2022-07-29-17-28-53.png)
+
 
 
 ## Getting Started
@@ -56,8 +65,8 @@ The project can be built with npm or yarn, so choose one of the approach bellow 
 * To download the project follow the instructions bellow:
 
 ```
-1. git clone https://github.com/franciscovinicios/dtmoney.git
-2. cd dtmoney
+1. git clone https://github.com/franciscovinicios/ignite-timer.git
+2. cd ignite-timer
 ```
 
 * Install the dependencies and start the project:
